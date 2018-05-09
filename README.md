@@ -6,10 +6,10 @@ This is a simple wrapper use the excellent image interpolation code provided by 
 The original author provides three versions of the code, one for MAC, Unix and PC. I've only tested the MAC version. BSplineImgInterp.c includes the code from the lib directory. This way, different versions can easily be interchanged by renaming lib_MAC, lib_UNIX or lib_PC to lib.
 
 # Matlab usage:
-  g = ImgInterpBSpline(f,pos,SplineDegree,MirrorFlag,Tol)
+  `g = ImgInterpBSpline(f,pos,SplineDegree,MirrorFlag,Tol)
  
-  Inputs:
-  f             : input image (single)
+  Inputs:\\
+  f             : input image (single)\\
   pos           : [N x 2] list of interpolation coordinates (double)
   SplineDegree* : default=3, one of [2,3,4,5,6,7,8,9] (double)
   MirrorFlag*   : default=true, extrapolate outside of the image by mirroring
@@ -19,7 +19,7 @@ The original author provides three versions of the code, one for MAC, Unix and P
   g            : interpolated values of f on pos (single)
   c*            : BSpline coefficient image (single)
  
-  \* in/outputs marked with an asterisk are optional
+  * in/outputs marked with an asterisk are optional`
  
 # Copyright:
 This code is using the MIT licence. The original code provided by P. Thevenaz is provided with this repo with the permision of the author, provided that the following message remains with this code:
