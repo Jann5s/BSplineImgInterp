@@ -296,10 +296,11 @@ static void		PutRow
 /*--------------------------------------------------------------------------*/
 extern int		SamplesToCoefficients
 				(
-					float	*Image,		/* in-place processing */
-					long	Width,		/* width of the image */
-					long	Height,		/* height of the image */
-					long	SplineDegree/* degree of the spline model */
+					float	*Image,		 /* in-place processing */
+					long	Width,		 /* width of the image */
+					long	Height,		 /* height of the image */
+					long	SplineDegree,/* degree of the spline model */
+                    double  Tol          /* Tolerance */
 				)
 
 { /* begin SamplesToCoefficients */
@@ -371,7 +372,7 @@ extern int		SamplesToCoefficients
 	}
 	for (y = 0L; y < Height; y++) {
 		GetRow(Image, y, Line, Width);
-		ConvertToInterpolationCoefficients(Line, Width, Pole, NbPoles, DBL_EPSILON);
+		ConvertToInterpolationCoefficients(Line, Width, Pole, NbPoles, Tol);
 		PutRow(Image, y, Line, Width);
 	}
 	free(Line);
@@ -384,7 +385,7 @@ extern int		SamplesToCoefficients
 	}
 	for (x = 0L; x < Width; x++) {
 		GetColumn(Image, Width, x, Line, Height);
-		ConvertToInterpolationCoefficients(Line, Height, Pole, NbPoles, DBL_EPSILON);
+		ConvertToInterpolationCoefficients(Line, Height, Pole, NbPoles, Tol);
 		PutColumn(Image, Width, x, Line, Height);
 	}
 	free(Line);

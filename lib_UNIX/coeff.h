@@ -29,5 +29,6 @@ extern int		SamplesToCoefficients
 					long	Width,		/* width of the image */
 					long	Height,		/* height of the image */
 					long	SplineDegree/* degree of the spline model */
+                    double  Tol          /* Tolerance */
 				);
 
