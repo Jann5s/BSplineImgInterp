@@ -24,10 +24,7 @@ The original author provides three versions of the code, one for MAC, Unix and P
  
  Written by Jan Neggers, 2018 Paris
 
- This file is merely a wrapper around code provided by P. Thevenaz, hosted on:
- http://bigwww.epfl.ch/thevenaz/interpolation/interpolation.html
- with the permision of the author, provided that the following message remains
- with this code:
+ This file is merely a wrapper around code provided by P. Thevenaz. Use of original code with the permision of the author, provided that the following message remains with this code:
 
  This C program is based on the following paper:
         P. Thevenaz, T. Blu, M. Unser, "Interpolation Revisited,"
