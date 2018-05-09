@@ -1,9 +1,11 @@
 # BSplineImgInterp
 Image Interpolation mex file for matlab allowing 2nd to 9th order BSplines.
 
-This is a simple wrapper use the excellent image interpolation code provided by P. Thevenaz on http://bigwww.epfl.ch/thevenaz/interpolation/interpolation.html. The file BSplineImgInterp.c can be compiled using the matlab mex function to create the matlab function BSplineImgInterp:
+This is a simple wrapper use the excellent image interpolation code provided by P. Thevenaz on http://bigwww.epfl.ch/thevenaz/interpolation/interpolation.html. The file BSplineImgInterp.c can be compiled using the matlab mex function to create the matlab function BSplineImgInterp.
 
-  Matlab usage:
+The original author provides three versions of the code, one for MAC, Unix and PC. I've only tested the MAC version. BSplineImgInterp.c includes the code from the lib directory. This way, different versions can easily be interchanged by renaming lib_MAC, lib_UNIX or lib_PC to lib.
+
+# Matlab usage:
   g = ImgInterpBSpline(f,pos,SplineDegree,MirrorFlag,Tol)
  
   Inputs:
@@ -18,13 +20,11 @@ This is a simple wrapper use the excellent image interpolation code provided by 
   c*            : BSpline coefficient image (single)
  
   \* in/outputs marked with an asterisk are optional
-
-The original author provides three versions of the code, one for MAC, Unix and PC. I've only tested the MAC version. BSplineImgInterp.c includes the code from the lib directory. This way, different versions can easily be interchanged by renaming lib_MAC, lib_UNIX or lib_PC to lib.
-
  
  Written by Jan Neggers, 2018 Paris
 
- This file is merely a wrapper around code provided by P. Thevenaz. Use of the original code is done with the permision of the author, provided that the following message remains with this code:
+# Copyright:
+This code is using the MIT licence. The original code provided by P. Thevenaz is provided with this repo with the permision of the author, provided that the following message remains with this code:
 
  This C program is based on the following paper:
         P. Thevenaz, T. Blu, M. Unser, "Interpolation Revisited,"
