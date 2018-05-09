@@ -21,8 +21,6 @@ The original author provides three versions of the code, one for MAC, Unix and P
  
   \* in/outputs marked with an asterisk are optional
  
- Written by Jan Neggers, 2018 Paris
-
 # Copyright:
 This code is using the MIT licence. The original code provided by P. Thevenaz is provided with this repo with the permision of the author, provided that the following message remains with this code:
 
